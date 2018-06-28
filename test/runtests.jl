@@ -25,7 +25,7 @@ end
 
 @test isfile(Conda.conda_bin(env))
 Conda.add("python", env)
-@test isfile(joinpath(Conda.python_dir(env), "python" * (is_windows() ? ".exe": "")))
+@test isfile(joinpath(Conda.python_dir(env), "python" * (is_windows() ? ".exe" : "")))
 
 channels = Conda.channels()
 @test channels == ["defaults"]
